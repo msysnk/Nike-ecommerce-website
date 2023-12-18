@@ -1,13 +1,13 @@
-# Nike-Ecommerce-Website
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mayank Gaur">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Nunito&family=Palanquin+Dark:wght@500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Nunito&family=Palanquin+Dark:wght@500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Nike Store</title>
 </head>
@@ -85,14 +85,6 @@
                 </a>
             </div>
         </div>
-    </div> <!-- Closing tag of the sliderWrapper -->
-</div> <!-- Closing tag of the slider -->
-
-<!-- Add the CTA button here -->
-<a href="#product">
-    <button class="ctaButton">Shop Now!</button>
-</a>
-
     </div>
    
     <div class="features">
@@ -135,7 +127,8 @@
                 <div class="size">43</div>
                 <div class="size">44</div>o
             </div>
-            <button class="productButton">BUY NOW!</button>
+            <button class="productButton">ADD TO CART</button>
+            <button class="checkoutButton" onclick="showPayment()">CHECKOUT NOW</button>
         </div>
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
@@ -157,7 +150,7 @@
                 <input type="text" placeholder="cvv" class="payInput sm">
             </div>
             <button class="payButton">Checkout!</button>
-            <span class="close">X</span>
+            <span class="close" onclick="hidePayment()">X</span>
         </div>
     </div>
     <div class="gallery">
@@ -246,11 +239,28 @@
                 </div>
             </div>
             <div class="footerRightMenu">
-                <span class="copyright">@John Doe. All rights reserved. 2022.</span>
+                <span class="copyright">@Mayank Gaur. All rights reserved 2023.</span>
             </div>
         </div>
     </footer>
-    <script src="./app.js"></script>
-</body>
+<script src="./app.js"></script>
+<script>
+    function handleCheckout() {
+        // Assuming you have some logic here to handle payment and OTP validation
+        // If successful, redirect to the desired page
+        window.location.href = "http://nikestoreshop.com/";
+    }
 
+    // Function to show payment details on button click
+    function showPayment() {
+        // Your existing logic to display the payment section
+    }
+
+    // Function to hide payment details on close button click
+    function hidePayment() {
+        // Your existing logic to hide the payment section
+    }
+</script>
+
+</body>
 </html>
