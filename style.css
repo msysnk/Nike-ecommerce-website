@@ -17,7 +17,7 @@ nav {
   /* background-color: #111; */
   background-color: #232c5b;
   color: white;
-  padding: 20px 50px;
+  padding: 0px 50px;
 }
 
 .navTop {
@@ -30,7 +30,7 @@ nav {
   display: flex;
   align-items: center;
   background-color: gray;
-  padding: 10px 20px;
+  margin-left: -200px;
   border-radius: 10px;
 }
 
@@ -129,7 +129,6 @@ nav {
   font-weight: 300;
   text-align: center;
   color: white;
-  border: 1px solid gray;
   z-index: 1;
 }
 
@@ -291,6 +290,21 @@ label {
 }
 
 .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.close-otp {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -584,4 +598,235 @@ footer {
     width: 90%;
     padding: 20px;
   }
+}
+
+.otp {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+      text-align: center;
+      background-color: #fff;
+      opacity: 0;
+    }
+
+    .container.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .otp-handle {
+      color: #545454;
+      cursor: default;
+      transition: color 0.3s;
+    }
+
+    h2, p {
+      color: #f6f3f3;
+      cursor: default;
+      transition: color 0.3s;
+    }
+
+    .otp-page {
+      margin: auto;
+    }
+
+    .otp-handle:hover {
+      text-decoration: underline;
+      color: #007BFF;
+    }
+
+    input {
+      padding: 15px;
+      width: 80%;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #processing-payment p {
+      font-weight: bold;
+      color: #383839;
+    }
+
+    #countdown1 {
+      font-weight: bold;
+    }
+
+    #countdown2 {
+      font-weight: bold;
+    }
+
+.menuItem {
+  text-decoration: none; /* Remove default underline */
+  color: #ffffff; /* Set default text color */
+  transition: color 0.3s, background-color 0.3s; /* Add transition for smooth effect */
+  position: relative; /* Set position to enable pseudo-element positioning */
+  display: inline-block; /* Ensure the background color covers the entire text on hover */
+}
+
+.menuItem:hover {
+  text-decoration: underline; /* Underline text on hover */
+  color: #ffffff; /* Change text color on hover */
+  background-color: #66727a; /* Highlight background color on hover */
+  font-size: 20px;
+}
+
+/* Add animation for fade-in effect on hover */
+.menuItem::before {
+  content: ''; /* Add an empty content pseudo-element */
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db; /* Match the hover background color */
+  opacity: 0; /* Start with zero opacity */
+  z-index: -1; /* Place it behind the text */
+  transition: opacity 0.3s; /* Add transition for fade-in effect */
+}
+
+/* Fade in on hover */
+.menuItem:hover::before {
+  opacity: 1;
+}
+
+.limitedOffer:hover {
+  text-decoration: underline; /* Underline text on hover */
+  color: #302730; /* Change text color on hover */
+  background-color: #8e2e76; /* Highlight background color on hover */
+  font-size: 20px;
+}
+
+/* Add animation for fade-in effect on hover */
+.limitedOffer::before {
+  content: ''; /* Add an empty content pseudo-element */
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db; /* Match the hover background color */
+  opacity: 0; /* Start with zero opacity */
+  z-index: -1; /* Place it behind the text */
+  transition: opacity 0.3s; /* Add transition for fade-in effect */
+}
+
+/* Fade in on hover */
+.limitedOffer:hover::before {
+  opacity: 1;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  border: 8px solid #3498db;
+  border-top: 8px solid #ecf0f1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.loader-otp {
+  display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tick-container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border: 8px solid #3498db;
+  overflow: hidden;
+}
+
+.tick {
+  position: absolute;
+  margin-left: 25%;
+  width: 30px;
+  height: 60px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #27ae60;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg) scaleX(-1);
+  animation: drawTick 0.5s ease-in-out forwards;
+}
+
+@keyframes drawTick {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 30px;
+    height: 60px;
+  }
+}
+
+.cross-container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 8px solid #8e4d25;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  background-color: #9f2b2b;
+}
+
+.horizontal-line-1 { 
+  width: 60px; 
+  height: 10px; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.vertical-line-1 { 
+  width: 10px; 
+  height: 60px; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%) rotate(225deg);
 }

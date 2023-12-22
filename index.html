@@ -84,14 +84,6 @@
                 </a>
             </div>
         </div>
-    </div> <!-- Closing tag of the sliderWrapper -->
-</div> <!-- Closing tag of the slider -->
-
-<!-- Add the CTA button here -->
-<a href="#product">
-    <button class="ctaButton">Shop Now!</button>
-</a>
-
     </div>
    
     <div class="features">
@@ -132,7 +124,7 @@
             <div class="sizes">
                 <div class="size">42</div>
                 <div class="size">43</div>
-                <div class="size">44</div>o
+                <div class="size">44</div>
             </div>
             <button class="productButton">BUY NOW!</button>
         </div>
@@ -158,6 +150,42 @@
             <button class="payButton">Checkout!</button>
             <span class="close">X</span>
         </div>
+        <div class="otp">
+            <div id="otp-page" class="container">
+                <h4 class = "otp-handle">Enter OTP sent to your mobile number</h4>
+                <input type="text" id="otpInput" maxlength="4" />
+                <br>
+                <button onclick="processPayment()">Submit</button>
+            </div>
+            
+            <div id="processing-payment" class="container">
+                <div class="loader-otp">
+                <div class="loader"></div></div>
+                <p class = "otp-handle">Processing Payment...</p>
+            </div>
+            
+            <div id="payment-success" class="container">
+            <div  class="loader-otp">
+                <div class="tick-container">
+                    <div class="tick"></div>
+                    </div>
+            </div>
+                <h2 class = "otp-handle">Payment Successful!</h2>
+                <p id="countdown1"></p>
+            </div>
+            
+            <div id="payment-failed" class="container">
+                <div  class="loader-otp">
+                    <div class="cross-container">
+                        <div class="line horizontal-line-1"></div>
+                        <div class="line vertical-line-1"></div>
+                      </div>
+                </div>
+                <h2 class = "otp-handle">Payment Failed!</h2>
+                <p id="countdown2"></p>
+            </div> 
+            <span class="close-otp">X</span>
+        </div>       
     </div>
     <div class="gallery">
         <div class="galleryItem">
