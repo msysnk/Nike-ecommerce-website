@@ -239,7 +239,7 @@
                 </div>
             </div>
             <div class="footerRightMenu">
-                <span class="copyright">@Mayank Gaur. All rights reserved 2023.</span>
+                <span class="copyright">@Mayank Gaur. All rights reserved 2024.</span>
             </div>
         </div>
     </footer>
